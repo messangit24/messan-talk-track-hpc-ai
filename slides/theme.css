@@ -1,0 +1,298 @@
+/* @theme google-public-sector
+ *
+ * Marp theme — cloned from WandLZhang/sbu-healthcare-ai-datathon.
+ * Google Sans, Material color palette, generous whitespace.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Mono:wght@400;500&display=swap');
+@import 'default';
+
+:root {
+  --gps-blue: #1A73E8;
+  --gps-blue-dark: #1967D2;
+  --gps-blue-deep: #185ABC;
+  --gps-yellow: #F9AB00;
+  --gps-green: #1E8E3E;
+  --gps-red: #D93025;
+  --gps-ink: #202124;
+  --gps-ink-soft: #3C4043;
+  --gps-grey: #5F6368;
+  --gps-grey-soft: #80868B;
+  --gps-line: #E8EAED;
+  --gps-surface: #F8F9FA;
+}
+
+section {
+  font-family: 'Google Sans', 'Product Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 28px;
+  line-height: 1.55;
+  color: var(--gps-ink-soft);
+  background: #ffffff;
+  padding: 96px 120px;
+  justify-content: flex-start;
+  letter-spacing: -0.005em;
+}
+
+section h1, section h2, section h3, section h4 {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  color: var(--gps-ink);
+  letter-spacing: -0.015em;
+}
+
+section h1 { font-size: 56px; margin: 0 0 56px 0; }
+section h2 { font-size: 44px; color: var(--gps-blue); margin: 0 0 48px 0; }
+section h3 { font-size: 32px; color: var(--gps-grey); margin: 0 0 24px 0; }
+
+section p { margin: 0 0 28px 0; }
+
+section strong { color: var(--gps-blue); font-weight: 500; }
+section em { color: var(--gps-grey); font-style: normal; }
+
+section a {
+  color: var(--gps-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 115, 232, 0.4);
+}
+
+section ul, section ol { list-style: none; padding: 0; margin: 0; }
+section ul li, section ol li { margin: 0 0 28px 0; padding: 0; }
+
+section table { border-collapse: collapse; width: 100%; font-size: 26px; margin: 0 0 32px 0; }
+section th { font-weight: 500; color: var(--gps-grey); text-align: left; padding: 14px 24px 14px 0; border-bottom: 2px solid var(--gps-blue); }
+section td { padding: 18px 24px 18px 0; border-bottom: 1px solid var(--gps-line); color: var(--gps-ink-soft); }
+section tr:last-child td { border-bottom: none; }
+
+section code { font-family: 'Google Sans Mono', 'JetBrains Mono', Menlo, monospace; background: var(--gps-surface); color: var(--gps-blue-deep); padding: 2px 8px; border-radius: 4px; font-size: 0.9em; }
+section pre { background: var(--gps-surface); padding: 24px 28px; border-radius: 8px; border-left: 4px solid var(--gps-blue); font-size: 22px; line-height: 1.5; }
+section pre code { background: transparent; padding: 0; color: var(--gps-ink-soft); }
+
+section::after { font-family: 'Google Sans', sans-serif; font-weight: 400; color: var(--gps-grey-soft); font-size: 16px; bottom: 36px; right: 48px; }
+
+section.title { display: flex; flex-direction: column; justify-content: center; padding: 96px 120px; }
+section.title h1 { font-size: 76px; font-weight: 500; margin: 0 0 24px 0; line-height: 1.1; }
+section.title h2 { font-size: 32px; font-weight: 400; color: var(--gps-grey); margin: 0 0 56px 0; }
+section.title p { color: var(--gps-grey); font-size: 24px; }
+
+section.section { background: var(--gps-blue); color: #ffffff; display: flex; flex-direction: column; justify-content: center; }
+section.section h1 { color: #ffffff; font-size: 84px; font-weight: 500; margin: 0 0 16px 0; }
+section.section h2 { color: rgba(255,255,255,0.85); font-size: 32px; font-weight: 400; margin: 0; }
+section.section p { color: rgba(255,255,255,0.85); font-size: 26px; }
+section.section::after { color: rgba(255,255,255,0.5); }
+
+section.section.yellow { background: var(--gps-yellow); }
+section.section.green  { background: var(--gps-green); }
+section.section.deep   { background: var(--gps-blue-deep); }
+
+section.compact { padding: 64px 88px; }
+section.compact h2 { font-size: 36px; margin: 0 0 28px 0; }
+section.compact p { font-size: 22px; margin: 0 0 18px 0; }
+section.compact table { font-size: 18px; }
+section.compact th { padding: 10px 16px 10px 0; }
+section.compact td { padding: 12px 16px 12px 0; line-height: 1.4; }
+
+section.image { padding: 48px 64px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+section.image img { max-width: 100%; max-height: 80vh; object-fit: contain; }
+
+/* ---------- Title slide with image background ---------- */
+section.title {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('visuals/title_bg.png');
+  background-size: cover, cover;
+  background-position: center right, center right;
+  background-repeat: no-repeat, no-repeat;
+  /* Anchor title block to top; push tagline (last p) to bottom */
+  justify-content: flex-start;
+  padding: 120px 50% 80px 120px;
+}
+section.title .chips { flex-direction: column; align-items: flex-start; }
+section.title h1 { margin: 0 0 16px 0; }
+section.title h2 { margin: 0; }
+/* Push the institution / credit line to the bottom of the slide */
+section.title p:last-of-type { margin-top: auto; margin-bottom: 0; }
+/* Suppress page number on title for a cleaner cover */
+section.title::after { color: transparent; }
+
+/* ---------- Hero stats (huge accent number) ---------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 24px 0;
+}
+.hero .num {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--gps-blue);
+}
+.hero .num.red    { color: var(--gps-red); }
+.hero .num.yellow { color: #B86E00; }
+.hero .num.green  { color: var(--gps-green); }
+.hero .num.deep   { color: var(--gps-blue-deep); }
+.hero.huge { align-items: center; text-align: center; margin: 24px 0 32px; }
+.hero.huge .num { font-size: 240px; letter-spacing: -0.06em; }
+.hero.huge .label { font-size: 26px; }
+
+/* ---------- Split layout (cards left, image right) ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 24px 0 0 0;
+}
+.cards.stack { grid-template-columns: 1fr; gap: 16px; margin: 0; }
+.split-img { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 16px; }
+.split-img img, .split-img video { max-width: 100%; max-height: 420px; object-fit: contain; border-radius: 8px; }
+.split h3 { font-size: 22px; margin: 0 0 8px 0; }
+.split-img .caption { font-size: 22px; color: var(--gps-grey); text-align: center; margin: 0; font-weight: 400; }
+.split-img .caption .big { color: var(--gps-green); font-weight: 500; font-size: 36px; letter-spacing: -0.02em; }
+.hero .label {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--gps-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.hero .sub {
+  font-size: 22px;
+  color: var(--gps-ink-soft);
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+/* ---------- Card grid ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 0 28px 0;
+}
+.cards.two  { grid-template-columns: repeat(2, 1fr); }
+.cards.four { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--gps-surface);
+  border-radius: 12px;
+  padding: 24px;
+  border-top: 5px solid var(--gps-blue);
+}
+.card.red    { border-top-color: var(--gps-red); }
+.card.yellow { border-top-color: var(--gps-yellow); }
+.card.green  { border-top-color: var(--gps-green); }
+.card.deep   { border-top-color: var(--gps-blue-deep); }
+
+.card .name {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--gps-ink);
+  margin: 0 0 6px 0;
+}
+.card .stat {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--gps-blue);
+  letter-spacing: -0.01em;
+  margin: 6px 0;
+}
+.card.red    .stat { color: var(--gps-red); }
+.card.yellow .stat { color: #B86E00; }
+.card.green  .stat { color: var(--gps-green); }
+.card.deep   .stat { color: var(--gps-blue-deep); }
+
+.card .stat .unit {
+  color: var(--gps-grey);
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 8px;
+  letter-spacing: 0;
+}
+
+.card .note {
+  font-size: 16px;
+  color: var(--gps-grey);
+  line-height: 1.4;
+}
+.card a {
+  color: inherit;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+/* ---------- Feature list (horizontal bands) ---------- */
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 24px 0 0 0;
+}
+.feature-item {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 14px 20px;
+  background: var(--gps-surface);
+  border-radius: 8px;
+  border-left: 5px solid var(--gps-blue);
+}
+.feature-item.red    { border-left-color: var(--gps-red); }
+.feature-item.yellow { border-left-color: var(--gps-yellow); }
+.feature-item.green  { border-left-color: var(--gps-green); }
+.feature-item .fname {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--gps-ink);
+  white-space: nowrap;
+  min-width: 240px;
+}
+.feature-item .fname a { color: inherit; border-bottom: none; }
+.feature-item .fdesc {
+  font-size: 18px;
+  color: var(--gps-grey);
+  line-height: 1.4;
+}
+
+/* ---------- Pull quote / accent bar ---------- */
+.pull {
+  border-left: 6px solid var(--gps-blue);
+  padding: 8px 0 8px 24px;
+  font-size: 30px;
+  line-height: 1.4;
+  color: var(--gps-ink);
+  font-weight: 500;
+  margin: 0 0 24px 0;
+}
+.pull.red    { border-left-color: var(--gps-red); }
+.pull.yellow { border-left-color: var(--gps-yellow); }
+.pull.green  { border-left-color: var(--gps-green); }
+.pull.deep   { border-left-color: var(--gps-blue-deep); }
+
+/* ---------- Chip badges ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px 0; }
+.chip {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  background: var(--gps-surface);
+  color: var(--gps-blue);
+  border: 1px solid var(--gps-line);
+}
+.chip.red    { color: var(--gps-red); }
+.chip.yellow { color: #B86E00; }
+.chip.green  { color: var(--gps-green); }
+.chip.solid-blue   { background: var(--gps-blue);   color: #fff; border-color: var(--gps-blue); }
+.chip.solid-red    { background: var(--gps-red);    color: #fff; border-color: var(--gps-red); }
+.chip.solid-yellow { background: var(--gps-yellow); color: var(--gps-ink); border-color: var(--gps-yellow); }
+.chip.solid-green  { background: var(--gps-green);  color: #fff; border-color: var(--gps-green); }
