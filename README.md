@@ -1,8 +1,8 @@
 # AI Infra Talk Track
 
-## View / generate the slides
+[**View the deck**](https://storage.googleapis.com/williszhang-ai-infra-talk-track-slides/slides.html)
 
-The committed `slides/slides.html` is the rendered deck — clone the repo and open it in any browser. To regenerate after editing `slides.md`:
+## Generate the slides
 
 ```bash
 cd slides
@@ -10,7 +10,12 @@ npx @marp-team/marp-cli slides.md --html --theme-set theme.css --output slides.h
 # optional: --pdf / --pptx (launches headless Chrome; can mangle CSS overlays in PDF)
 ```
 
-`--html` is required (the deck uses inline HTML cards / split layouts).
+`--html` is required (the deck uses inline HTML cards / split layouts). After regenerating, push the updated `slides.html` to the GCS bucket so the link above stays current:
+
+```bash
+gcloud storage cp slides.html gs://williszhang-ai-infra-talk-track-slides/slides.html
+gcloud storage cp -r visuals gs://williszhang-ai-infra-talk-track-slides/   # only if visuals change
+```
 
 ---
 
