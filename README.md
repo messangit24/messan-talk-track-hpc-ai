@@ -1,8 +1,8 @@
 # AI Infra Talk Track
 
-[**View the deck**](https://htmlpreview.github.io/?https://github.com/cloud-gtm/williszhang-ai-infra-talk-track/blob/main/slides/slides.html) (renders the committed `slides/slides.html` via `htmlpreview.github.io`)
+## View / generate the slides
 
-## Generate the slides
+The committed `slides/slides.html` is the rendered deck — clone the repo and open it in any browser. To regenerate after editing `slides.md`:
 
 ```bash
 cd slides
