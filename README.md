@@ -81,6 +81,11 @@ Every major frontier AI lab that had a real choice has landed on TPU for at leas
 - [**Midjourney**](https://medium.com/@kshitizrimal/tpu-vs-gpu-the-shift-from-general-purpose-to-pure-performance-da04cf39c75c) — monthly compute went from ~$2M to ~$700K after migrating to TPU
 - [**Meta**](https://siliconangle.com/2026/02/26/google-meta-reportedly-strike-new-multibillion-dollar-ai-chip-deal/) — multi-year, multi-billion-dollar TPU lease signed Feb 2026 for Llama training and internal ranking/personalization. Meta runs the largest single NVIDIA cluster in the industry (100K+ H100s for Llama 4) — they're not switching, they're diversifying
 - [**Recursion**](https://cloud.google.com/customers/recursion) — drug discovery, neural net training at scale on TPU
+- [**TPUv8**] (https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/)
+- [**TPUv8-Architecture**] (https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive?e=48754805)
+- [**TPUv8-Virgo**] (https://cloud.google.com/blog/products/networking/introducing-virgo-megascale-data-center-fabric?e=48754805)
+- [**TPUv7-IronWood**] (https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpu-ironwood)
+- [**TPU-TorchTPU**] (https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/)
 
 ~90% of generative AI unicorns run on Google Cloud AI infrastructure.
 
